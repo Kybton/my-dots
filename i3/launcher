@@ -1,0 +1,1 @@
+rofi -modi run,drun -show drun -location 2 -xoffset 1 -yoffset 250 -line-padding 4 -columns 1 -width 25 -lines 10 -padding 25 -hide-scrollbar -show-icons -drun-icon-theme "vimix" 

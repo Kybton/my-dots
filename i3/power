@@ -1,0 +1,9 @@
+MENU="$(rofi -sep "|" -dmenu -i -p 'Choose' -location 3 -xoffset -10 -yoffset 36 -width 10 -hide-scrollbar -line-padding 4 -padding 20 -lines 5 <<< "Lock|Shutdown|Reboot|Hibernate|Logout|Halt")"
+            case "$MENU" in
+                *Lock) betterlockscreen -l dim;;
+                *Logout) i3-msg exit ;;
+                *Reboot) systemctl reboot ;;
+                *Shutdown) systemctl -i poweroff ;;
+				*Hibernate) systemctl hibernate ;;
+				*Halt) systemctl halt
+            esac
